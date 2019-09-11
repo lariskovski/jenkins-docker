@@ -1,5 +1,7 @@
 # Jenkins
 
+![jenkins image](https://www.mundodocker.com.br/wp-content/uploads/2016/08/jenkins-e-docker.png)
+
 jenkins with connection to the docker host to run tests and send the build to registry
 
 - Using this guide:

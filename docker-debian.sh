@@ -1,5 +1,5 @@
-#author: Larissa
-#description: script to install docker in a container runnin debian (jenkins/jenkins)
+# Author: Larissa
+# Description: script to install docker inside the jenkins container (debian 9 base image)
 
 apt update -y && sudo apt upgrade -y
 

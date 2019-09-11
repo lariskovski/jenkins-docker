@@ -1,6 +1,6 @@
 # Jenkins
 
-![jenkins image](https://www.mundodocker.com.br/wp-content/uploads/2016/08/jenkins-e-docker.png)
+![jenkins image](https://jenkins.io/images/logos/fire/256.png)
 
 jenkins with connection to the docker host to run tests and send the build to registry
 

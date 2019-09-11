@@ -1,6 +1,7 @@
 # Jenkins
 
-![jenkins image](https://jenkins.io/images/logos/fire/256.png)
+![jenkins fire](https://jenkins.io/images/logos/fire/256.png)
+![jenkins mario](https://jenkins.io/images/logos/plumber/256.png)
 
 jenkins with connection to the docker host to run tests and send the build to registry
 

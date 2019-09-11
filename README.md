@@ -9,3 +9,16 @@ https://medium.com/hackernoon/continuous-delivery-of-react-app-with-jenkins-and-
 - Use this repo as example:
 
 https://github.com/lariskovski/react-app
+
+
+### usage
+
+- git clone
+
+- change the default password in the Dockerfile
+
+- docker-compose up -d
+
+- you can access the jenkins in the port 8080 (or change the mapping)
+
+- the registry's purpose is to build the images that passes the pipeline's tests (as the jenkins has access to the docker host's docker comamnds)

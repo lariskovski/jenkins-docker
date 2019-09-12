@@ -24,4 +24,4 @@ https://github.com/lariskovski/react-app
 
 - you can access the jenkins in the port 8080 (or change the mapping)
 
-- the registry's purpose is to build the images that passes the pipeline's tests (as the jenkins has access to the docker host's docker comamnds)
+- the registry's purpose is to build the images that passes the pipeline's tests (as jenkins has access to docker commands)

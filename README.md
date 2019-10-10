@@ -19,7 +19,7 @@ Jenkins with connection to the docker host to run tests and send the build to re
 
 ### Sonar
 
-1. Add sonar plugin: SonarQube Scanner
+1. Add sonar plugin: SonarQube Scanner [Tutorial](https://www.youtube.com/watch?v=k-3krTRuAFA)
 
 ## Sources
 

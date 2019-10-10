@@ -24,7 +24,7 @@ Jenkins with connection to the docker host to run tests and send the build to re
 1. Add the following to the dockerfile
 
 ~~~~
-RUN cd /opt && wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744-linux.zip && unzip sonar-scanner-cli-4.0.0.1744-linux.zip && rm -rf sonar-scanner-cli-4.0.0.1744-linux.zip
+RUN cd /opt && wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744-linux.zip && unzip sonar-scanner-cli-4.0.0.1744-linux.zip && rm -rf sonar-scanner-cli-4.0.0.1744-linux.zip && mv /opt/sonar-scanner-4.0.0.1744-linux /opt/sonar-scanner
 
 COPY ./sonar-scanner.properties opt/sonar-scanner-4.0.0.1744-linux/conf/sonar-scanner.properties
 ~~~~~

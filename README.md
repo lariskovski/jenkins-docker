@@ -17,6 +17,10 @@ Jenkins with connection to the docker host to run tests and send the build to re
 
 - the registry's purpose is to build the images that passes the pipeline's tests
 
+### Sonar
+
+1. Add sonar plugin: SonarQube Scanner
+
 ## Sources
 
 [continuous-delivery-of-react-app-with-jenkins-and-docker](https://medium.com/hackernoon/continuous-delivery-of-react-app-with-jenkins-and-docker-8a1ae1511b86)

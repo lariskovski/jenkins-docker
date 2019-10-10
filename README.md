@@ -40,6 +40,24 @@ sonar.sourceEncoding=UTF-8
 2. Add SonarQube plugin to jenkins (already added added to the plugins.txt) [Tutorial](https://www.youtube.com/watch?v=k-3krTRuAFA)
 
 
+3. JS
+
+Now that we have SonarQube setup, let’s install and set up the SonarQube Scanner to run against the codebase. We gonna use the npm module called sonarqube-scanner, so lets install it with below npm command.
+
+npm install sonarqube-scanner --save-dev
+Create a sonar-project.js file in the root of your project with the following code:
+
+~~~~
+const sonarqubeScanner = require('sonarqube-scanner');
+     sonarqubeScanner({
+       serverUrl: 'http://sonarqube:9000',
+       options : {
+       'sonar.sources': '.',
+       'sonar.inclusions' : './**' // Entry point of your code
+       }
+     }, () => {});
+~~~~
+
 ## Sources
 
 [continuous-delivery-of-react-app-with-jenkins-and-docker](https://medium.com/hackernoon/continuous-delivery-of-react-app-with-jenkins-and-docker-8a1ae1511b86)

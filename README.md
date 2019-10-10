@@ -3,18 +3,9 @@
 ![jenkins fire](https://jenkins.io/images/logos/fire/256.png)
 ![jenkins mario](https://jenkins.io/images/logos/plumber/256.png)
 
-jenkins with connection to the docker host to run tests and send the build to registry
+Jenkins with connection to the docker host to run tests and send the build to registry
 
-- Using this guide:
-
-https://medium.com/hackernoon/continuous-delivery-of-react-app-with-jenkins-and-docker-8a1ae1511b86
-
-- Use this repo as example:
-
-https://github.com/lariskovski/react-app
-
-
-### usage
+### Usage
 
 - git clone
 
@@ -24,4 +15,8 @@ https://github.com/lariskovski/react-app
 
 - you can access the jenkins in the port 8080 (or change the mapping)
 
-- the registry's purpose is to build the images that passes the pipeline's tests (as jenkins has access to docker commands)
+- the registry's purpose is to build the images that passes the pipeline's tests
+
+## Sources
+
+[continuous-delivery-of-react-app-with-jenkins-and-docker](https://medium.com/hackernoon/continuous-delivery-of-react-app-with-jenkins-and-docker-8a1ae1511b86)

@@ -19,7 +19,26 @@ Jenkins with connection to the docker host to run tests and send the build to re
 
 ### Sonar
 
-1. Add sonar plugin: SonarQube Scanner [Tutorial](https://www.youtube.com/watch?v=k-3krTRuAFA)
+0. Add SonarScanner on Jenkins with custom sonar-scanner.properties:
+
+1. Add the following to the dockerfile
+
+~~~~
+RUN cd /opt && wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744-linux.zip && unzip sonar-scanner-cli-4.0.0.1744-linux.zip && rm -rf sonar-scanner-cli-4.0.0.1744-linux.zip
+
+COPY ./sonar-scanner.properties opt/sonar-scanner-4.0.0.1744-linux/conf/sonar-scanner.properties
+~~~~~
+
+the custom sonnar scanner file must contain the containers host name or server IP (vm):
+
+~~~~
+sonar.host.url=http://sonarqube:9000
+
+sonar.sourceEncoding=UTF-8
+~~~~
+
+2. Add SonarQube plugin to jenkins (already added added to the plugins.txt) [Tutorial](https://www.youtube.com/watch?v=k-3krTRuAFA)
+
 
 ## Sources
 

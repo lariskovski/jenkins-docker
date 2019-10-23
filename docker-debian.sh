@@ -14,3 +14,8 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(
 
 #Now that the Docker repository is enabled, update the apt package list and install the latest version of Docker CE (Community Edition) with:
 apt update -y && apt install docker-ce -y
+
+#Install docker compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose

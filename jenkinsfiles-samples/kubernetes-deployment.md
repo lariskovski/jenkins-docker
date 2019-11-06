@@ -1,6 +1,8 @@
-Using [Kubernetes-cli amazing Plugin](https://github.com/jenkinsci/kubernetes-cli-plugin)
+1. Install [Kubernetes-cli amazing Plugin](https://github.com/jenkinsci/kubernetes-cli-plugin);
 
-Using Pipeline: Jenkinsfile basic example
+2. Get kubernetes kubeconfig and add as a credential;
+
+3. Create a Pipeline job: Jenkinsfile basic example
 
 ~~~~
 pipeline {
@@ -30,7 +32,9 @@ pipeline {
 }
 ~~~~
 
-Example deploy using variable:
+4. Add deploy using variable in a repo:
+
+Make sure to put the yamls path in "configs" inside kubernetesDeploy step.
 
 ~~~~
 apiVersion: extensions/v1beta1

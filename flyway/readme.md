@@ -78,3 +78,7 @@ Schema version: 1.0.0
 To apply the migrations:
 
 ``flyway migrate``
+
+Or some specific verison:
+
+``flyway -target=1.0.2 migrate``

@@ -82,3 +82,9 @@ To apply the migrations:
 Or some specific verison:
 
 ``flyway -target=1.0.2 migrate``
+
+# Configuring Jenkins
+
+## move the flyway folder to /var/lib/jenkins
+
+mv flyway/ var/jenkins_home/plugins/

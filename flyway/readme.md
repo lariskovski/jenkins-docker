@@ -51,3 +51,25 @@ create table Person (
         FirstName varchar(255)
 );
 ~~~~
+
+## Migrations
+
+Note that in the flyway info, the change is gonna be pending:
+
+~~~~
+root@8fae48260730:/flyway-6.0.8/sql# flyway info
+Flyway Community Edition 6.0.8 by Redgate
+Database: jdbc:mysql://127.0.0.1:3306/demo (MySQL 5.7)
+Schema version: 1.0.0
+
++-----------+---------+-----------------------+----------+---------------------+----------+
+| Category  | Version | Description           | Type     | Installed On        | State    |
++-----------+---------+-----------------------+----------+---------------------+----------+
+|           | 1.0.0   | << Flyway Baseline >> | BASELINE | 2019-11-25 20:57:33 | Baseline |
+| Versioned | 1.0.1   | create table          | SQL      |                     | Pending  |
++-----------+---------+-----------------------+----------+---------------------+----------+
+~~~~
+
+To apply the migrations:
+
+``flyway migrate``

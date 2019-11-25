@@ -53,7 +53,7 @@ create table Person (
 ~~~~
 
 ~~~~
-vi sql/V1_0_1__insert_into_table.sql 
+vi sql/V1_0_2__insert_into_table.sql 
 insert into Person(LastName,FirstName) values ("larissa","porto");
 ~~~~
 

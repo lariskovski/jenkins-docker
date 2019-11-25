@@ -66,12 +66,12 @@ root@8fae48260730:/flyway-6.0.8/sql# flyway info
 Flyway Community Edition 6.0.8 by Redgate
 Database: jdbc:mysql://127.0.0.1:3306/demo (MySQL 5.7)
 Schema version: 1.0.0
-
 +-----------+---------+-----------------------+----------+---------------------+----------+
 | Category  | Version | Description           | Type     | Installed On        | State    |
 +-----------+---------+-----------------------+----------+---------------------+----------+
 |           | 1.0.0   | << Flyway Baseline >> | BASELINE | 2019-11-25 20:57:33 | Baseline |
-| Versioned | 1.0.1   | create table          | SQL      |                     | Pending  |
+| Versioned | 1.0.1   | create table          | SQL      | 2019-11-25 21:17:05 | Success  |
+| Versioned | 1.0.2   | insert into table     | SQL      |                     | Pending  |
 +-----------+---------+-----------------------+----------+---------------------+----------+
 ~~~~
 

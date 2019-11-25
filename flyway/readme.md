@@ -10,7 +10,7 @@
 
 ``tar xvzf flyway-commandline-6.0.8-linux-x64.tar.gz && sudo ln -s `pwd`/flyway-6.0.8/flyway /usr/local/bin``
 
-## Configuration
+## Setup Configuration
 
 ``vi /flyway-6.0.8/conf/flyway.conf``
 
@@ -32,3 +32,6 @@ Install mysql-server;
 
 Create demo db;
 
+## Flyway config
+
+``flyway -baselineVersion=1.0.0 baseline``

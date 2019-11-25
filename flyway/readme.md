@@ -45,7 +45,7 @@ Check config:
 ## create sql to test
 
 ~~~~
-vi sql/V_1_0_1_create_table.sql
+vi sql/V1_0_1__create_table.sql 
 create table Person (
         LastName varchar(255),
         FirstName varchar(255)

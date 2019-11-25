@@ -22,6 +22,8 @@ update the following lines:
 
 ``flyway.password=``
 
+``flyway.sqlMigrationPrefix=V``
+
 Where the migrations will be placed:
 
 ``flyway.location=flyway/sql``
@@ -35,3 +37,17 @@ Create demo db;
 ## Flyway config
 
 ``flyway -baselineVersion=1.0.0 baseline``
+
+Check config:
+
+``flyway info``
+
+## create sql to test
+
+~~~~
+vi sql/V_1_0_1_create_table.sql
+create table Person (
+        LastName varchar(255),
+        FirstName varchar(255)
+);
+~~~~

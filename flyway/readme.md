@@ -91,7 +91,7 @@ mv flyway/ var/jenkins_home/plugins/
 
 ## jenkins config
 
-![free-style](/images/free-style)
+![free-style](/images/free-style.png)
 
 ~~~~
 Started by user admin

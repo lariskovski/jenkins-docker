@@ -114,3 +114,14 @@ Migrating schema `teste` to version 1.0.4 - sql test dois
 Successfully applied 4 migrations to schema `teste` (execution time 00:00.253s)
 Finished: SUCCESS
 ~~~~
+
+
+### check available connectors
+
+~~~~
+ls flyway-6.0.8/drivers
+derby-10.15.1.3.jar        h2-1.4.199.jar           jna-platform-4.5.2.jar         mysql-connector-java-8.0.17.jar
+derbyclient-10.15.1.3.jar  hsqldb-2.5.0.jar         jtds-1.3.1.jar                 postgresql-42.2.8.jre6.jar
+derbyshared-10.15.1.3.jar  jaybird-jdk18-3.0.6.jar  mariadb-java-client-2.4.0.jar  put-your-jdbc-drivers-here.txt
+derbytools-10.15.1.3.jar   jna-4.5.2.jar            mssql-jdbc-7.2.0.jre8.jar      sqlite-jdbc-3.23.1.jar
+~~~~

@@ -34,7 +34,7 @@ Install mysql-server;
 
 Create demo db;
 
-## Flyway config
+## Flyway config: creating flyway schema
 
 ``flyway -baselineVersion=1.0.0 baseline``
 

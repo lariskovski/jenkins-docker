@@ -88,3 +88,25 @@ Or some specific verison:
 ## move the flyway folder to /var/lib/jenkins
 
 mv flyway/ var/jenkins_home/plugins/
+
+## jenkins config
+
+![free-style](/images/free-style)
+
+~~~~
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/flywa-free-style
+$ var/jenkins_home/plugins/flyway-6.0.8/flyway -user=root ******** -url=jdbc:mysql://127.0.0.1:3306/teste -locations=filesystem:/var/jenkins_home/workspace/flywa-free-style/ migrate
+Flyway Community Edition 6.0.8 by Redgate
+Database: jdbc:mysql://127.0.0.1:3306/teste (MySQL 5.7)
+Successfully validated 4 migrations (execution time 00:00.046s)
+Creating Schema History table `teste`.`flyway_schema_history` ...
+Current version of schema `teste`: << Empty Schema >>
+Migrating schema `teste` to version 1.0.1 - create table
+Migrating schema `teste` to version 1.0.2 - insert into table
+Migrating schema `teste` to version 1.0.3 - sql test
+Migrating schema `teste` to version 1.0.4 - sql test dois
+Successfully applied 4 migrations to schema `teste` (execution time 00:00.253s)
+Finished: SUCCESS
+~~~~

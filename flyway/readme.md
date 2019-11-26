@@ -93,6 +93,10 @@ mv flyway/ var/jenkins_home/plugins/
 
 ![free-style](/flyway/images/free-style.png)
 
+- teste é a database criada no banco
+
+- location pode ser também: filesystem:${WORKSPACE} se tiver puxando do git
+
 ~~~~
 Started by user admin
 Running as SYSTEM

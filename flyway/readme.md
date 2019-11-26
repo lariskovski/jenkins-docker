@@ -95,7 +95,7 @@ mv flyway/ var/jenkins_home/plugins/
 
 - teste é a database criada no banco
 
-- location pode ser também: filesystem:${WORKSPACE} se tiver puxando do git
+- location pode ser também: filesystem:${WORKSPACE} se tiver puxando do git, caso ele nao seja especificado vai para o caminho padrao, na pasta de instalação do flyway, pasta sql
 
 ~~~~
 Started by user admin

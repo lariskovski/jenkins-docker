@@ -140,15 +140,21 @@ pipeline{
         stage('Cloning Bitbucket Repo') {
           steps {
             git branch: BIT_BRANCH, url: BIT_REPO
+            // stash includes: "k8s-yamls/*.yml", name: 'yamls'
           }
         }
         stage ('flyway'){
             steps{
                 script{
-                    flywayrunner commandLineArgs: '-sqlMigrationPrefix=rh', credentialsId: 'rancher-flyway', flywayCommand: 'migrate', installationName: 'flyway', locations: "filesystem:${WORKSPACE}", url: 'jdbc:mysql://MYSQL-IP:PORTA/BANCO'
+                    //flywayrunner commandLineArgs: "-sqlMigrationPrefix='rh__'", credentialsId: 'rancher-flyway', flywayCommand: 'baseline', installationName: 'flyway', locations: "filesystem:${WORKSPACE}", url: 'jdbc:mysql://35.222.218.166:31000/flyway'
+                    flywayrunner commandLineArgs: "-sqlMigrationPrefix=rh__ -table=compasso_rh_version", credentialsId: 'banco-remoto-flyway', flywayCommand: 'migrate', installationName: 'flyway', locations: "filesystem:${WORKSPACE}", url: 'jdbc:mysql://35.222.218.166:31000/flywayy'
                 }
             }
         }
     }
 }
 ~~~~
+
+
+SQL file example: rh__1_0_1__create_table.sql
+The table flyway will create on the db to version the history: compasso_rh_version

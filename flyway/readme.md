@@ -125,3 +125,30 @@ derbyclient-10.15.1.3.jar  hsqldb-2.5.0.jar         jtds-1.3.1.jar              
 derbyshared-10.15.1.3.jar  jaybird-jdk18-3.0.6.jar  mariadb-java-client-2.4.0.jar  put-your-jdbc-drivers-here.txt
 derbytools-10.15.1.3.jar   jna-4.5.2.jar            mssql-jdbc-7.2.0.jre8.jar      sqlite-jdbc-3.23.1.jar
 ~~~~
+
+
+## Jenkins Pipeline Example
+
+~~~~
+pipeline{
+  environment {
+    BIT_REPO = 'https://bitbucket.org/larissa_rosa/test-repo'
+    BIT_BRANCH = 'flyway-test'
+  }
+    agent any
+    stages{
+        stage('Cloning Bitbucket Repo') {
+          steps {
+            git branch: BIT_BRANCH, url: BIT_REPO
+          }
+        }
+        stage ('flyway'){
+            steps{
+                script{
+                    flywayrunner commandLineArgs: '-sqlMigrationPrefix=rh', credentialsId: 'rancher-flyway', flywayCommand: 'migrate', installationName: 'flyway', locations: "filesystem:${WORKSPACE}", url: 'jdbc:mysql://MYSQL-IP:PORTA/BANCO'
+                }
+            }
+        }
+    }
+}
+~~~~

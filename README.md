@@ -13,7 +13,7 @@ Jenkins with connection to the docker host to run tests and send the build to re
 
 - docker-compose up -d
 
-- you can access the jenkins in the port 8080 (or change the mapping)
+- you can access the jenkins on port 8080 (or change the mapping)
 
 - the registry's purpose is to build the images that passes the pipeline's tests
 
